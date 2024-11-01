@@ -8,19 +8,29 @@
     <link rel="icon" href="https://github.com/user-attachments/assets/e2a39457-d020-45ba-b6c5-efd070cfeeef">
 </head>
 <body style="background-color: #fffbf5">
-    <div class="tablecenter"><table style="width: 60%" al>
-        <tr>
-            <th width="55%"" align="left"> <img src="https://github.com/user-attachments/assets/e7196836-6702-4a6a-8ca8-27810eaa1adb" style="height: 100px;"></th>              
-            <th width="15%" align="center"><img src="https://github.com/user-attachments/assets/bb52a58d-cafd-4506-bbb5-50e9090a2122"><br>About</th>
-            <th width="15%" align="center"><img src="https://github.com/user-attachments/assets/c39f8ed1-e156-40d3-83d1-e6ca3bea4f5d"><br>Search by drink</th>
-            <th width="15%" align="center"><img src="https://github.com/user-attachments/assets/a4ebcf16-3e51-4b63-b293-9396dd9a3a25"><br>Search by shop</th>
-        </tr>
-        <tr> 
-            <td colspan="4"><img src="https://github.com/user-attachments/assets/3add7910-cfaf-4951-b97e-fa114b781b1a" style="width: 100%;"></td>  
-        </tr>
-        <tr>
-            <td colspan="4"><div class="disclaimer-style">Disclaimer: This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website.</div></td>
-        </tr>
-    </table></div>
+
+
+    <nav class="navbar">
+        <img src="https://github.com/user-attachments/assets/e7196836-6702-4a6a-8ca8-27810eaa1adb" style="height: 100px;">
+        <div class="menu-toggle" id="menuToggle">&#9776;</div> <!-- Hamburger icon -->
+        <div class="navbar-links" id="navbarLinks">
+            <a href="#about"><img src="https://github.com/user-attachments/assets/bb52a58d-cafd-4506-bbb5-50e9090a2122">About</a>
+            <a href="#drinks"><img src="https://github.com/user-attachments/assets/c39f8ed1-e156-40d3-83d1-e6ca3bea4f5d">Drinks</a>
+            <a href="#stores"><img src="https://github.com/user-attachments/assets/a4ebcf16-3e51-4b63-b293-9396dd9a3a25">Stores</a>
+        </div>
+    </nav>
+
+    <img src="https://github.com/user-attachments/assets/3add7910-cfaf-4951-b97e-fa114b781b1a" style="width: 100%;">
+    <div class="disclaimer-style"> Disclaimer: This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website. </div>
+     
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navbar = document.querySelector('.navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active'); // Toggle the active class on click
+        });
+    </script>
 </body>
 </html>
