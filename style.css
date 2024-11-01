@@ -10,7 +10,7 @@ table {
 /*disclaimer font and color style*/
 
 .disclaimer-style{
-  font-size: 20px !important;
+  font-size: 8px !important;
   color: #a9a9a9;
 }
 
@@ -49,8 +49,29 @@ body {
   gap: 1rem; /* Space between links */
 }
 
-/* Media Query for responsive design */
-@media (max-width: 600px) {
+/* Media Query for smaller screen */
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none; /* Hide links by default */
+      flex-direction: column; /* Stack links vertically */
+      position: absolute; /* Position absolute to avoid disrupting layout */
+      top: 120px; /* Below the navbar */
+      left: 60px;
+      right: 0px;
+      background-color: #fffbf5;
+      text-align:right;
+      z-index: 1; /* Ensure it appears above other content */
+  }
+  .navbar.active .navbar-links {
+      display: flex; /* Show links when navbar is active */
+  }
+  .menu-toggle {
+      display: block; /* Show menu toggle button */
+  }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 576px) {
   .navbar-links {
       display: none; /* Hide links by default */
       flex-direction: column; /* Stack links vertically */
