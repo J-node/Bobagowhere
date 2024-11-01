@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            padding: 1rem;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            color: white;
+            font-size: 24px;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 1rem; /* Space between links */
+        }
+
+        /* Media Query for responsive design */
+        @media (max-width: 600px) {
+            .navbar-links {
+                display: none; /* Hide links by default */
+                flex-direction: column; /* Stack links vertically */
+                position: absolute; /* Position absolute to avoid disrupting layout */
+                top: 60px; /* Below the navbar */
+                left: 0;
+                right: 0;
+                background-color: #333;
+                z-index: 1; /* Ensure it appears above other content */
+            }
+            .navbar.active .navbar-links {
+                display: flex; /* Show links when navbar is active */
+            }
+            .menu-toggle {
+                display: block; /* Show menu toggle button */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="menu-toggle" id="menuToggle">&#9776;</div> <!-- Hamburger icon -->
+        <div class="navbar-links" id="navbarLinks">
+            <a href="#about">About</a>
+            <a href="#drinks">Drinks</a>
+            <a href="#stores">Stores</a>
+        </div>
+    </nav>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navbar = document.querySelector('.navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active'); // Toggle the active class on click
+        });
+    </script>
+
+</body>
+</html>
