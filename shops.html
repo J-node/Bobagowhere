@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BubbleTeaGoWhere</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://github.com/J-node/Bobagowhere/blob/main/Images/TabLogo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJVY5959JX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VJVY5959JX');
+    </script>
+</head>
+<body style="background-color: #fffbf5">
+    <nav class="navbar">
+        <a href="/index.html" class="nohover"><img src="/Images/page-icon.png" style="height: 100px;"></a>
+        <div class="menu-toggle" id="menuToggle">&#9776;</div> <!-- Hamburger icon -->
+        <div class="navbar-links" id="navbarLinks">
+            <a href="/aboutpage.html"><img src="/Images/menu-icon-about.png">About</a>
+            <a href="/drinkcopy.html"><img src="/Images/menu-icon-drink.png">Drinks</a>
+            <a href="/shops.html"><img src="Images/menu-icon-shop.png">Stores</a>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div id="map-container">
+            <iframe src="https://www.google.com/maps/d/embed?mid=1IpupjvH4cRdoETIKb_l6NJyXS82N83k&ehbc=2E312F" width="640" height="480"></iframe>
+        </div>
+        
+      <!---- <script>
+            function initMap() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(
+                        (position) => {
+                            const lat = position.coords.latitude;
+                            const lng = position.coords.longitude;
+                            const mapIframe = document.getElementById('google-map');
+                            mapIframe.src = `https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10000!2d${lng}!3d${lat}!2m3!1f0!2m1!1s0x0:0x0!5e0!3m2!1sen!2sus!4v1682537277077!5m2!1sen!2sus`;
+                        },
+                        (error) => {
+                            console.error('Error getting location:', error);
+                        }
+                    );
+                }
+            }
+            initMap();
+        </script> -->
+        
+        <div class="disclaimer-style"> <hr> Disclaimer: This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website. </div>
+
+    </div>
+    
+     
+</body>
+</html>
