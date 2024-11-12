@@ -1,0 +1,115 @@
+.homepagecontentcontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  gap:2rem;
+}
+
+.no-hover:hover {
+  text-decoration: none; /* Remove underline on hover */
+  color: inherit; /* Keep the original text color */
+  cursor: default; /* Optionally change cursor */
+}
+
+/*disclaimer font and color style*/
+.disclaimer-style{
+  font-size: 8px !important;
+  color: #a9a9a9;
+}
+
+/* from chatgpt on navbar */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-top: 76px; /* Height of your navbar */
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fffbf5;
+  padding: 1rem;
+  z-index: 1030; /* Ensure navbar stays above other content */
+}
+.navbar a {
+  color: black;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: black;
+  font-size: 24px;
+}
+.navbar-links {
+  display: flex;
+  gap: 1rem; /* Space between links */
+}
+
+/* Media Query for smaller screen */
+@media (max-width: 768px) {
+  .navbar-links {
+      display: none; /* Hide links by default */
+      flex-direction: column; /* Stack links vertically */
+      position: absolute; /* Position absolute to avoid disrupting layout */
+      top: 120px; /* Below the navbar */
+      left: 60px;
+      right: 0px;
+      background-color: #fffbf5;
+      text-align:right;
+      transition: max-height 0.3s ease;
+      z-index: 1; /* Ensure it appears above other content */
+  }
+  .navbar.active .navbar-links {
+      display: flex; /* Show links when navbar is active */
+  }
+  .menu-toggle {
+      display: block; /* Show menu toggle button */
+  }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 576px) {
+  .navbar-links {
+      display: none; /* Hide links by default */
+      flex-direction: column; /* Stack links vertically */
+      position: absolute; /* Position absolute to avoid disrupting layout */
+      top: 120px; /* Below the navbar */
+      left: 60px;
+      right: 0px;
+      background-color: #fffbf5;
+      text-align:right;
+      transition: max-height 0.3s ease;
+      z-index: 1; /* Ensure it appears above other content */
+  }
+  .navbar.active .navbar-links {
+      display: flex; /* Show links when navbar is active */
+  }
+  .menu-toggle {
+      display: block; /* Show menu toggle button */
+  }
+}
+
+/*homepage image without text url: https://github.com/user-attachments/assets/a6e433eb-e97d-4546-9e6e-2d044a988514*/
+
+/* Add these new styles */
+.container-fluid {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Adjust main content position when navbar is expanded */
+@media (max-width: 991.98px) {
+    .navbar-collapse.show ~ .container-fluid {
+        transform: translateY(230px); /* Adjust this value based on your expanded navbar height */
+    }
+    
+    .navbar-collapse.collapsing ~ .container-fluid {
+        transition: transform 0.3s ease;
+    }
+}

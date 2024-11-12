@@ -27,31 +27,58 @@
         </div>
     </nav>
 
-
     <div class="container">
-        <div id="map-container">
-            <iframe src="https://www.google.com/maps/d/embed?mid=1IpupjvH4cRdoETIKb_l6NJyXS82N83k&ehbc=2E312F" width="640" height="480"></iframe>
-        </div>
-        
-      <!---- <script>
+        <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1IpupjvH4cRdoETIKb_l6NJyXS82N83k&ehbc=2E312F" width="820" height="900"></iframe>
+    </div>
+
+       <!---- <script>
+            // Initialize the map with a default location
             function initMap() {
+                // Default location (you can set this to some default location, like the center of a city)
+                const defaultLocation = { lat: -34.397, lng: 150.644 };
+    
+                // Create a map centered at the default location
+                const map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 15,
+                    center: defaultLocation,
+                });
+    
+                // Check if geolocation is supported
                 if (navigator.geolocation) {
+                    // Get the current location of the user
                     navigator.geolocation.getCurrentPosition(
                         (position) => {
-                            const lat = position.coords.latitude;
-                            const lng = position.coords.longitude;
-                            const mapIframe = document.getElementById('google-map');
-                            mapIframe.src = `https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10000!2d${lng}!3d${lat}!2m3!1f0!2m1!1s0x0:0x0!5e0!3m2!1sen!2sus!4v1682537277077!5m2!1sen!2sus`;
+                            const currentLocation = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude,
+                            };
+    
+                            // Create a marker at the user's current location
+                            const marker = new google.maps.Marker({
+                                position: currentLocation,
+                                map: map,
+                                title: "You are here!",
+                            });
+    
+                            // Re-center the map on the user's current location
+                            map.setCenter(currentLocation);
                         },
-                        (error) => {
-                            console.error('Error getting location:', error);
+                        () => {
+                            alert("Geolocation failed or is denied.");
                         }
                     );
+                } else {
+                    alert("Geolocation is not supported by this browser.");
                 }
             }
-            initMap();
-        </script> -->
-        
+        </script>-->
+    
+        <!--- Include the Google Maps JavaScript API script -->
+       <!---- <script
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+            async
+            defer></script>-->
+
         <div class="disclaimer-style"> <hr> Disclaimer: This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website. </div>
 
     </div>
