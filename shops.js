@@ -12,21 +12,21 @@ menuToggle.addEventListener('click', () => {
     }
 });
 
-if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-        (position) => {
-            const lat = position.coords.latitude;
-            const lng = position.coords.longitude;
-            const mapIframe = document.getElementById('google-map');
-            mapIframe.src = `https://www.google.com/maps?q=${lat},${lng}&z=15&output=embed`;
-        },
-        (error) => {
-            console.error('Error getting location:', error);
-            const mapIframe = document.getElementById('google-map');
-            mapIframe.src = "https://www.google.com/maps/d/embed?mid=1IpupjvH4cRdoETIKb_l6NJyXS82N83k&ehbc=2E312F";
-        }
-    );
-}
+//if (navigator.geolocation) {
+    //navigator.geolocation.getCurrentPosition(
+       // (position) => {
+            //const lat = position.coords.latitude;
+            //const lng = position.coords.longitude;
+            //const mapIframe = document.getElementById('google-map');
+           // mapIframe.src = `https://www.google.com/maps?q=${lat},${lng}&z=15&output=embed?mid=1IpupjvH4cRdoETIKb_l6NJyXS82N83k&ehbc=2E312F`;
+       // },
+       // (error) => {
+          //  console.error('Error getting location:', error);
+          //  const mapIframe = document.getElementById('google-map');
+          //  mapIframe.src = "https://www.google.com/maps/d/embed?mid=1IpupjvH4cRdoETIKb_l6NJyXS82N83k&ehbc=2E312F";
+       // }
+   // );
+//}
 
 function closeAlert() {
     document.getElementById('alertBox').style.display = 'none';
