@@ -7,16 +7,30 @@
   gap:2rem;
 }
 
-.no-hover:hover {
-  text-decoration: none; /* Remove underline on hover */
-  color: inherit; /* Keep the original text color */
-  cursor: default; /* Optionally change cursor */
-}
-
 /*disclaimer font and color style*/
 .disclaimer-style{
-  font-size: 8px !important;
+  font-size: 10px !important;
   color: #a9a9a9;
+}
+
+/* alert box style */
+
+.alert-box {
+  padding: 15px;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+  margin: 20px auto;
+  max-width: 800px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 /* from chatgpt on navbar */
@@ -38,6 +52,7 @@ body {
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: background-color 0.3s;
+  font-weight: bold;
 }
 
 .menu-toggle {
@@ -48,8 +63,26 @@ body {
 }
 .navbar-links {
   display: flex;
-  gap: 1rem; /* Space between links */
+  gap: 100px;
 }
+
+.nav-link {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+}
+
+.nav-link:hover {
+  background-color: #FF8C00;
+  text-decoration-color: white;
+  transform: translateY(-2px);
+  color: white !important;
+}
+
 
 /* Media Query for smaller screen */
 @media (max-width: 768px) {
@@ -95,21 +128,60 @@ body {
   }
 }
 
-/*homepage image without text url: https://github.com/user-attachments/assets/a6e433eb-e97d-4546-9e6e-2d044a988514*/
-
-/* Add these new styles */
-.container-fluid {
-    position: relative;
-    transition: transform 0.3s ease;
+.gradient-text {
+    background: linear-gradient(45deg, #FF8C00, #FF69B4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    text-align: left;
 }
 
-/* Adjust main content position when navbar is expanded */
-@media (max-width: 991.98px) {
-    .navbar-collapse.show ~ .container-fluid {
-        transform: translateY(230px); /* Adjust this value based on your expanded navbar height */
-    }
-    
-    .navbar-collapse.collapsing ~ .container-fluid {
-        transition: transform 0.3s ease;
-    }
+h6 a {
+    color: #FF8C00;
+    text-decoration: none;
+}
+
+h6 a:hover {
+    color: #FF8C00 !important;
+    text-decoration: underline !important;
+}
+
+/*for drinkscopy.html*/
+.tea-description-panel {
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.tea-info {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .tea-description-panel {
+      margin-top: 20px;
+  }
+}
+
+.card-shop, .card-price, .card-temperature {
+  background-color: #e8d5c4;  /* light brown background instead of #4CAF50 */
+  color: #5c4033;            /* dark brown text instead of white */
+  padding: 4px 8px;         
+  border-radius: 6px;       
+  display: inline-block;    
+  margin: 8px 4px 8px 0;    
+}
+
+.NutrigradeNA {
+  color: #808080;  /* grey color */
+  font-style: italic;
+}
+
+.card-teatype i {  /* Style for the italicized text about size */
+  color: #0000FF;  /* Changed to blue */
+}
+
+.card-details {  /* Style for the size details */
+  color: #5c4033;
 }

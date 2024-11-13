@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BubbleTeaGoWhere</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://github.com/user-attachments/assets/e2a39457-d020-45ba-b6c5-efd070cfeeef">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJVY5959JX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VJVY5959JX');
+    </script>
+    <style>
+        .nav-link {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body style="background-color: #fffbf5">
+    <nav class="navbar">
+        <img src="/Images/page-icon.png" style="height: 100px;">
+        <div class="menu-toggle" id="menuToggle">&#9776;</div> <!-- Hamburger icon -->
+        <div class="navbar-links" id="navbarLinks" style="gap: 10px;">
+            <a href="/index.html" class="nav-link">Home</a>
+            <a href="/drinkcopy.html" class="nav-link">Discover Drinks</a>
+            <a href="/shops.html" class="nav-link">Interactive Map</a>
+            <a href="/aboutpage.html" class="nav-link">About</a>
+        </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-lg-6 mb-4">
+                <img src="Images/aboutpageimage.png" class="img-fluid">
+            </div>
+
+            <div class="col-xs-12 col-lg-6">
+                <h1 class="gradient-text">From one bubble tea lover to another, we got you, fam!</h1>
+                <p><h5>
+                    There's nothing quite like the joy of discovering a new favorite drink that makes your taste buds dance! 
+                    <br><br>
+                    Got cravings? No problem lah! From classic milk tea to crazy flavors like 'Creme Brûlée milk tea' that even your ah ma would be curious about, we've got all the places you must check out. 
+                    <br><br>
+                    Think of us as your Bubble Tea GPS—guiding you to all the must-try spots without you getting lost in the sea of pearls!
+                </p></div></h5>
+            </div>
+    </div>
+    <div class="disclaimer-style"> <hr> Disclaimer: This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website. </div>
+</div>
+    
+     
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navbar = document.querySelector('.navbar');
+        const container = document.querySelector('.container');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            // Add margin to container when navbar is active
+            if (navbar.classList.contains('active')) {
+                container.style.marginTop = '200px'; // Adjust this value based on your navbar height
+            } else {
+                container.style.marginTop = '0';
+            }
+        });
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

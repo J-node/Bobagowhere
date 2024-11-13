@@ -15,74 +15,40 @@
         gtag('js', new Date());
         gtag('config', 'G-VJVY5959JX');
     </script>
+
 </head>
+
 <body style="background-color: #fffbf5">
     <nav class="navbar">
-        <a href="/index.html" class="nohover"><img src="/Images/page-icon.png" style="height: 100px;"></a>
+        <img src="/Images/page-icon.png" style="height: 100px;">
         <div class="menu-toggle" id="menuToggle">&#9776;</div> <!-- Hamburger icon -->
-        <div class="navbar-links" id="navbarLinks">
-            <a href="/aboutpage.html"><img src="/Images/menu-icon-about.png">About</a>
-            <a href="/drinkcopy.html"><img src="/Images/menu-icon-drink.png">Drinks</a>
-            <a href="/shops.html"><img src="Images/menu-icon-shop.png">Stores</a>
+        <div class="navbar-links" id="navbarLinks" style="gap: 10px;">
+            <a href="/index.html" class="nav-link">Home</a>
+            <a href="/drinkcopy.html" class="nav-link">Discover Drinks</a>
+            <a href="/shops.html" class="nav-link">Interactive Map</a>
+            <a href="/aboutpage.html" class="nav-link">About</a>
         </div>
     </nav>
 
     <div class="container">
-        <iframe src="https://www.google.com/maps/d/u/1/embed?mid=1IpupjvH4cRdoETIKb_l6NJyXS82N83k&ehbc=2E312F" width="820" height="900"></iframe>
+        <div class="alert-box" id="alertBox">
+            <span class="close-btn" onclick="closeAlert()">&times;</span>
+            <p style="margin: 0;"><b>14 Nov 2024:</b> We will be updating the map with more shops soon! Stay tuned!</p>
+        </div>
+        
+        <h1 class="gradient-text" style="text-align:center">Explore a new shop today!</h1>
+        <h5 style="text-align:center">In the map below, you can find the locations of all the shops we have listed in our directory.</h5>
+        <br>
+        <div id="map-container" style="display: flex; justify-content: center;">
+            <iframe id="google-map" width="700" height="500" frameborder="0" style="border:0"></iframe>
+        </div>
     </div>
 
-       <!---- <script>
-            // Initialize the map with a default location
-            function initMap() {
-                // Default location (you can set this to some default location, like the center of a city)
-                const defaultLocation = { lat: -34.397, lng: 150.644 };
-    
-                // Create a map centered at the default location
-                const map = new google.maps.Map(document.getElementById("map"), {
-                    zoom: 15,
-                    center: defaultLocation,
-                });
-    
-                // Check if geolocation is supported
-                if (navigator.geolocation) {
-                    // Get the current location of the user
-                    navigator.geolocation.getCurrentPosition(
-                        (position) => {
-                            const currentLocation = {
-                                lat: position.coords.latitude,
-                                lng: position.coords.longitude,
-                            };
-    
-                            // Create a marker at the user's current location
-                            const marker = new google.maps.Marker({
-                                position: currentLocation,
-                                map: map,
-                                title: "You are here!",
-                            });
-    
-                            // Re-center the map on the user's current location
-                            map.setCenter(currentLocation);
-                        },
-                        () => {
-                            alert("Geolocation failed or is denied.");
-                        }
-                    );
-                } else {
-                    alert("Geolocation is not supported by this browser.");
-                }
-            }
-        </script>-->
-    
-        <!--- Include the Google Maps JavaScript API script -->
-       <!---- <script
-            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
-            async
-            defer></script>-->
-
-        <div class="disclaimer-style"> <hr> Disclaimer: This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website. </div>
-
+    <div class="disclaimer-style"> 
+        <hr>Disclaimer: This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website. </div>
     </div>
     
+    <script src="shops.js"></script>
      
 </body>
 </html>

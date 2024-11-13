@@ -1,10 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head></head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BubbleTeaGoWhere</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://github.com/J-node/Bobagowhere/blob/main/Images/TabLogo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VJVY5959JX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-VJVY5959JX');
+    </script>
+</head>
 
-<body>
-<h1>Testing Jas </h1>
+<body style="background-color: #fffbf5">
+    <nav class="navbar">
+        <img src="/Images/page-icon.png" style="height: 100px;">
+        <div class="menu-toggle" id="menuToggle">&#9776;</div> <!-- Hamburger icon -->
+        <div class="navbar-links" id="navbarLinks" style="gap: 10px;">
+            <a href="/index.html" class="nav-link">Home</a>
+            <a href="/drinkcopy.html" class="nav-link">Discover Drinks</a>
+            <a href="/shops.html" class="nav-link">Interactive Map</a>
+            <a href="/aboutpage.html" class="nav-link">About</a>
+        </div>
+    </nav> 
+
+    <div class="container">
+
+        <div class="row align-items-center" style="background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 80%); padding: 1rem;">
+            <div class="col-md-6 h-100 d-flex flex-column justify-content-start align-self-start">
+                <h2 class="gradient-text" style="text-align: left;">Welcome to Singapore's first Bubble Tea Directory</h2>
+                <h5>Compare prices and try a new drink today!</h5>
+                <a href="/drinkcopy.html" class="btn btn-primary mt-3 mb-4" style="background-color: #FF8C00; border-color: #FF8C00; width: 150px;">Get Started </a>
+            </div>
+            <div class="col-md-6">
+                <img src="/Images/homepage-image clean.png" class="img-fluid">
+            </div>
+        </div>
+
+        <div class="row align-items-left text-left">
+           <p><h5>Bored of your usual drink? Explore Singapore's bubble tea scene with us!</h5></p>
+        </div>
+
+        <div class="row align-items-center text-center">
+            <div class="col-md-4 d-flex justify-content-center flex-column align-items-center">
+                <img src="/Images/homepagecard1icon.png" width="80px">
+                <h6><a href="/drinkcopy.html" style="color: #FF8C00; text-decoration: none;">Discover drinks</a></h6>
+                <h9>Try a new flavor today!</h9>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-center flex-column align-items-center">
+                <img src="/Images/homepagecard3icon.png" width="80px">
+                <h6><a href="/drinkcopy.html" style="color: #FF8C00; text-decoration: none;">Save $</a></h6>
+                <h9>Cheaper options available!</h9>
+            </div>
+
+            <div class="col-md-4 d-flex justify-content-center flex-column align-items-center"> 
+                    <img src="/Images/homepagecard2icon.png" width="80px">
+                    <h6><a href="/shops.html" style="color: #FF8C00; text-decoration: none;">Interactive Map</a></h6>
+                    <h9>Explore new spots!</h9>
+            </div>
+            
+        </div>
+        
+        <div class="disclaimer-style"> <hr> Disclaimer: This website is created for learning purposes only. The information provided here should not be considered professional advice. Please note that we make no guarantees regarding the accuracy, completeness, or reliability of the contents of this website. Any actions you take based on the contents of this website are at your own risk. We are not liable for any losses or damages incurred from the use of this website. </div>
+
+    </div>
+    
+     
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navbar = document.querySelector('.navbar');
+        const container = document.querySelector('.container');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            if (navbar.classList.contains('active')) {
+                container.style.marginTop = '200px';
+            } else {
+                container.style.marginTop = '0';
+            }
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
-
 </html>
